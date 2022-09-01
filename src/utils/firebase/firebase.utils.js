@@ -20,4 +20,11 @@ const firebaseApp = initializeApp(firebaseConfig);
 
 ///provider for google authentication
 const provider = new GoogleAuthProvider();
-provider.setCustomParameters({});
+provider.setCustomParameters({
+  prompt: "select_account",
+});
+
+export const auth = getAuth();
+export const signInWithGooglePopup = () => {
+  signInWithPopup(auth, provider);
+};
