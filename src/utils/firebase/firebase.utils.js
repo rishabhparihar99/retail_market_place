@@ -1,3 +1,4 @@
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import {
   getAuth,
@@ -5,18 +6,22 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
 } from "firebase/auth";
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD0lwCdWVd1zV0BGgk2L3rw60BjTzrCHpk",
-  authDomain: "crwn-clothing-db-c679c.firebaseapp.com",
-  projectId: "crwn-clothing-db-c679c",
-  storageBucket: "crwn-clothing-db-c679c.appspot.com",
-  messagingSenderId: "831602955885",
-  appId: "1:831602955885:web:cff8f5494df887c734d164",
+  apiKey: "AIzaSyAdmDrPcbkISiHSPPLIUaHFDiAJVEXHRgA",
+  authDomain: "retail-market-place.firebaseapp.com",
+  projectId: "retail-market-place",
+  storageBucket: "retail-market-place.appspot.com",
+  messagingSenderId: "162020790131",
+  appId: "1:162020790131:web:134fa398d82bcbd637ff06",
 };
 
 // Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
 ///provider for google authentication
 const provider = new GoogleAuthProvider();
@@ -25,6 +30,4 @@ provider.setCustomParameters({
 });
 
 export const auth = getAuth();
-export const signInWithGooglePopup = () => {
-  signInWithPopup(auth, provider);
-};
+export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
