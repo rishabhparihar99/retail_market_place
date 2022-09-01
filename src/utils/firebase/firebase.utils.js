@@ -33,5 +33,5 @@ export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 export const db = getFirestore();
 export const createUserDocumentFromAuth = async (userAuth) => {
   const userDocRef = doc(db, "users", userAuth.uid);
-  console.log(userDocRef);
+  console.log(userDocRef); // Object taht represnt some document reference in database
 };
