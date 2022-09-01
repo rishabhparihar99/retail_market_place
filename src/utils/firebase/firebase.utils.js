@@ -38,7 +38,7 @@ export const createUserDocumentFromAuth = async (userAuth) => {
   console.log(userSnapshot.exists());
 
   //If user data doesnt exist, create/set the document with the data from userAuth in my Collection
-  if (!userSnapshot.exist()) {
+  if (!userSnapshot.exists()) {
     const { displayName, email } = userAuth;
     const createdAt = new Date();
 
