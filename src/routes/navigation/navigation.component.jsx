@@ -1,14 +1,14 @@
 import {Outlet} from 'react-router-dom';
-
+import {Fragment} from 'react';
 const Navigation = () => {
     return (
-      <div>
-        <div>
+      <Fragment>
+        <div className='navigation'>
           <h1>I am navigation bar</h1>
         </div>
         <Outlet />
-      </div>
+    </Fragment>
     );
-  };
+};
 
 export default Navigation;
